@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="270.66666666666669"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US$ " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsH-K4-Gqg">
-                                <rect key="frame" x="40" y="115.33333333333333" width="70" height="38.333333333333329"/>
+                                <rect key="frame" x="40" y="116.33333333333333" width="70" height="38.333333333333329"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="IIM-A4-jb2">
                                         <variation key="heightClass=regular-widthClass=regular" constant="110"/>
@@ -37,7 +37,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entre com o valor gasto nos EUA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CG8-eC-yEk">
-                                <rect key="frame" x="43" y="93.333333333333329" width="224" height="18"/>
+                                <rect key="frame" x="43" y="94.333333333333329" width="224" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -68,10 +68,10 @@
                                 </variation>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8py-sB-GZo">
-                                <rect key="frame" x="132" y="113.66666666666669" width="203" height="43"/>
+                                <rect key="frame" x="132" y="114.66666666666669" width="203" height="43"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
                                 </variation>
@@ -123,6 +123,11 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Compras" image="bag" id="RTt-wz-Uog"/>
+                    <connections>
+                        <outlet property="lbReal" destination="RwA-zc-4SS" id="ekI-yN-FYX"/>
+                        <outlet property="lbRealDescription" destination="Jc4-vl-KLg" id="mGs-zI-ScI"/>
+                        <outlet property="tfDolar" destination="8py-sB-GZo" id="wGh-5r-vdw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,10 +165,13 @@
                                                 <color key="backgroundColor" red="1" green="0.89411764705882346" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" red="0.67450980392156867" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
                                                 </variation>
+                                                <connections>
+                                                    <outlet property="delegate" destination="imw-kl-nRK" id="Xwb-R8-OAs"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -184,10 +192,13 @@
                                                 <color key="backgroundColor" red="0.77647058823529413" green="0.94901960784313721" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" red="0.0" green="0.50980392156862742" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
                                                 </variation>
+                                                <connections>
+                                                    <outlet property="delegate" destination="imw-kl-nRK" id="2yF-BD-7zZ"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -208,10 +219,13 @@
                                                 <color key="backgroundColor" red="0.88235294117647056" green="0.96862745098039216" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" red="0.0" green="0.023529411764705882" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
                                                 </variation>
+                                                <connections>
+                                                    <outlet property="delegate" destination="imw-kl-nRK" id="LWN-2f-mze"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -232,6 +246,11 @@
                         <viewLayoutGuide key="safeArea" id="BZu-35-drm"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Configurações" image="settings" id="eQ7-Fg-N2D"/>
+                    <connections>
+                        <outlet property="tfDolar" destination="d2a-Z3-DLA" id="OEY-KO-myn"/>
+                        <outlet property="tfIOF" destination="FpM-SS-Gcy" id="bCe-fa-gYr"/>
+                        <outlet property="tfStateTaxes" destination="eje-IB-cNh" id="yGx-pH-0VL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zjj-N3-QwF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -322,6 +341,9 @@
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="By8-P9-k6R">
                                         <rect key="frame" x="306" y="105.66666666666669" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="changeIOF:" destination="GZb-ia-zXh" eventType="valueChanged" id="I6G-QX-tDX"/>
+                                        </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total em R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ulf-zE-Jb3">
                                         <rect key="frame" x="19.999999999999993" y="163.33333333333337" width="99.333333333333314" height="20.333333333333343"/>
@@ -395,6 +417,15 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Impostos" image="taxes" id="t78-bW-cK8"/>
+                    <connections>
+                        <outlet property="lbDolar" destination="Vpn-uF-kvd" id="7CH-WX-gfl"/>
+                        <outlet property="lbIOF" destination="ywO-6K-0mH" id="bn2-IE-cCN"/>
+                        <outlet property="lbIOFDescription" destination="NmP-QB-hDA" id="lAD-UN-HUv"/>
+                        <outlet property="lbReal" destination="umq-ow-GKy" id="R3P-TC-ec3"/>
+                        <outlet property="lbStateTax" destination="ccP-Kz-NfU" id="36S-aZ-seP"/>
+                        <outlet property="lbStateTaxDescription" destination="ndc-HU-lFL" id="gYS-m8-PaO"/>
+                        <outlet property="swCreditCard" destination="By8-P9-k6R" id="C4w-rC-tYQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XF6-BZ-mHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
